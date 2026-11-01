@@ -1,6 +1,6 @@
 # Crypto 情緒溫度計 · Crypto Sentiment Thermometer
 
-**Live site: https://jade011099.github.io/crypto-sentiment-thermometer/**
+**Live site: https://bella053101.github.io/crypto-sentiment-thermometer/**
 
 整體加密市場與 BTC、ETH、SOL 的 Fear & Greed 指數：最新讀值、情緒區間、近 30 天走勢，以及與昨日、上週、上月、去年同期的比較。中英雙語。
 
