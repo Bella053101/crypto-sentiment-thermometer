@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Crypto 情緒溫度計</title>
+  <meta name="description" content="整體加密市場與 BTC、ETH、SOL 的 Fear &amp; Greed 指數：最新讀值、情緒區間與近 30 天走勢。資料來源 CryptoKeyhole。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600&family=IBM+Plex+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div class="brand">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3.5a2 2 0 0 1 4 0v9.3a4.5 4.5 0 1 1-4 0z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="16.8" r="2.2" fill="currentColor"/><path d="M12 15V8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <h1 data-i18n="title">Crypto 情緒溫度計</h1>
+      </div>
+      <div class="tools">
+        <p class="status" id="status" aria-live="polite"></p>
+        <button type="button" class="btn" id="refresh"><span data-i18n="refresh">重新整理</span></button>
+        <div class="seg" role="group" aria-label="語言 Language">
+          <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" data-lang="en" aria-pressed="false">English</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="lede">
+      <p class="lede" id="lede">—</p>
+      <p class="sub" data-i18n="sub"></p>
+    </section>
+
+    <p class="notice" id="notice" role="status" hidden></p>
+
+    <section class="cards" id="cards" aria-label="最新讀值"></section>
+
+    <div class="mid">
+      <section class="panel" id="trend-panel">
+        <div class="panel-head">
+          <div>
+            <h2 data-i18n="trendTitle"></h2>
+            <p class="note" data-i18n="trendNote"></p>
+          </div>
+          <div class="seg" id="focus" role="group"></div>
+        </div>
+        <div class="chart" id="trend"></div>
+      </section>
+
+      <aside class="panel" id="how">
+        <h2 data-i18n="howTitle"></h2>
+        <p class="note" data-i18n="howNote"></p>
+        <ul class="bands" id="bands"></ul>
+        <dl class="defs" id="defs"></dl>
+      </aside>
+    </div>
+
+    <section class="panel" id="compare">
+      <h2 data-i18n="compareTitle"></h2>
+      <p class="note" data-i18n="compareNote"></p>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr id="compare-head"></tr></thead>
+          <tbody id="compare-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" id="about">
+      <h2 data-i18n="aboutTitle"></h2>
+      <div class="about">
+        <div>
+          <h3 data-i18n="valuesTitle"></h3>
+          <ul class="values" id="values"></ul>
+        </div>
+        <div>
+          <h3 data-i18n="stepsTitle"></h3>
+          <ol class="steps" id="steps"></ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>Source: <a href="https://cryptokeyhole.com/fear-and-greed-index/" target="_blank" rel="noopener">CryptoKeyhole Fear &amp; Greed Index</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
+      <p data-i18n="disclaimer"></p>
+    </footer>
+  </div>
+
+  <noscript><p class="page">這個頁面需要 JavaScript 才能顯示資料。This page needs JavaScript to show the data.</p></noscript>
+  <script src="data/snapshot.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
